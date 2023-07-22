@@ -1,0 +1,13 @@
+############################################
+## lista pasta
+Options +Indexes
+
+############################################
+## UTF-8
+<FilesMatch "\.(htm|html|css|js)$">
+AddDefaultCharset UTF-8
+</FilesMatch>
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]

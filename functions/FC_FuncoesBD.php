@@ -5,7 +5,7 @@ $_SESSION['conexao'] = $conexao;
 $_POST = seguro_array($_POST);
 $_GET = seguro_array($_GET);
 
-sanitizeXSS();
+//sanitizeXSS();
 
 function bd_Conexao($database_server, $database_username, $database_password, $database_name)
 {

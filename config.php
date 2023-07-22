@@ -1,7 +1,7 @@
 <?php
 $GLOBALS['_SENHA_GERAL'] = "senhageral";
 
-$flagError=false;
+$flagError=true;
 if($flagError){
     ini_set('error_reporting', E_ALL);
     ini_set('display_errors', 1);
@@ -24,7 +24,7 @@ header("X-XSS-Protection: 1");
 header('X-Frame-Options: deny');
 header("Strict-Transport-Security:max-age=63072000");
 header("X-Content-Type-Options: nosniff");
-define("URL", "http://");
+define("URL", "http://localhost/synodos");
 
 if (isset($_SERVER['HTTP_ORIGIN']) && $_SERVER['HTTP_ORIGIN'] != URL) {
     echo "Acesso negado";
@@ -74,11 +74,11 @@ $_SESSION['url_site']=URL_BASE;
 // BASE DE DADOS
 $_SESSION['database_desc'] = 'Produção';
 $_SESSION['database_vers'] = '001';
-$database_server = '127.0.0.1';
+$database_server = 'mysql';
 $database_type = 'mysql';
-$database_username = 'admin';
-$database_password = '';
-$database_name = '';
+$database_username = 'root';
+$database_password = 'rootpassword';
+$database_name = 'synodos';
 $database_port = '';
 
 date_default_timezone_set('America/Sao_Paulo');
